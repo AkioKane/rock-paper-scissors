@@ -61,4 +61,10 @@ function playGame(rounds) {
 let humanScore = 0;
 let computerScore = 0;
 
-playGame(5)
+playGame(1)
+
+function playSelection(event) {
+    
+}
+
+const buttons = document.querySelectorAll("button")
