@@ -38,8 +38,7 @@ function GetHumanChoice(humanChoice) {
 
 function playRound (humanChoice, computerChoice) {
     if (humanChoice == computerChoice) {
-        console.log("Ничья");
-        playRound(GetHumanChoice(), GetComputerChoice(3));
+        return console.log("Ничья");
     }
 
     else if (
