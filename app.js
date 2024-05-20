@@ -14,12 +14,6 @@ function GetComputerChoice(max) {
 }
 
 function GetHumanChoice(humanChoice) {
-    console.log(
-        "\n1 - Rock\n" +
-        "2 - Papper\n" +
-        "3 - Scissors"
-    );
-
     let choiceHuman = humanChoice;
     let result = 0
     
