@@ -7,17 +7,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     buttons.forEach(button => {
         button.addEventListener('click', function playSelection(event) {
             const buttonId = event.target.id;
-            let game = new Game(humanScore, computerScore)
+            let game = new Game()
             return game.getHumanChoice(buttonId);
         });
     });
 });
 
-class Game {
-    construcor(humanScore, computerScore) {
-        this.humanScore = humanScore;
-        this.computerScore = computerScore;
 
+class Game {
+    constructor() {
+        // ...
     }
 
     getComputerChoice(max) {
@@ -51,8 +50,8 @@ class Game {
             humanChoice == 2 && computerChoice == 3 ||
             humanChoice == 3 && computerChoice == 1
         ) {
-            this.humanScore += 1;
-            console.log(`Human score: ${this.humanScore}\n` + `Computer Score: ${this.computerScore}`);
+            humanScore++;
+            console.log(`Human score: ${humanScore}\n` + `Computer Score: ${computerScore}`);
             return console.log("Human win!");
         }
     
@@ -61,10 +60,10 @@ class Game {
             humanChoice == 2 && computerChoice == 1 ||
             humanChoice == 3 && computerChoice == 2
         ) {
-            this.computerScore + 1;
-            console.log(`Human score: ${this.humanScore}\n` + `Computer Score: ${this.computerScore}`);
+            computerScore++;
+            console.log(`Human score: ${humanScore}\n` + `Computer Score: ${computerScore}`);
             return console.log("Computer win!");
         }
-        console.log(`Human score: ${this.humanScore}\n` + `Computer Score: ${this.computerScore}`)
+        console.log(`Human score: ${humanScore}\n` + `Computer Score: ${computerScore}`)
     }
 }
